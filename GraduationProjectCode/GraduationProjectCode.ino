@@ -417,7 +417,8 @@ void loop() {
   }
 
   if (!getgpsStatus()) NULL;
-  else if (getgpsStatus()) {
+  else
+   if (getgpsStatus()) {
 
     while (Serial1.available() > 0) {
       gps.encode(Serial1.read());
